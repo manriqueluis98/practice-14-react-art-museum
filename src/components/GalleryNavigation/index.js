@@ -5,9 +5,9 @@ import './GalleryNavigation.css'
 function GalleryNavigation({galleries}){
     console.log(galleries)
     return (
-        <nav>
-            <NavLink exact to='/'>Home</NavLink>
-            {galleries.map(gallery => <NavLink key={gallery.id} to={`/galleries/${gallery.id}`}>{gallery.name}</NavLink>)}
+        <nav className='nav'>
+            <NavLink className='link-home' exact to='/'>Home</NavLink>
+            {galleries.map(gallery => <NavLink className='link-gallery' key={gallery.id} to={`/galleries/${gallery.id}`}>{gallery.name}</NavLink>)}
         </nav>
     )
 }
